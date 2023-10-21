@@ -1,0 +1,37 @@
+# Funcionalidade: Login do saucedemo
+ 
+ Como usuario
+ Quero logar no site
+ Para fazer compras
+
+# 1° Cenario: Autenticação valida
+
+ Dado que eu acesse a página inicial do site saucedemo;
+ Quando eu digitar o usuario "standard_user" 
+ E digitar a senha "secret_source":
+
+ Então deve ser exibida a seleção de produtos e o carrinho.
+
+# 2° Cenario: Autenticação com usuario bloqueado
+
+ Dado que eu acesse a página inicial do site saucedemo;
+ Quando eu digitar o usuario "locked_out_user" 
+ E digitar a senha "secret_source":
+
+ Então deve ser exibida um erro informando que o usuario esta bloquado.
+
+# 3° Cenario: Autenticação com problemas
+
+ Dado que eu acesse a página inicial do site saucedemo;
+ Quando eu digitar o usuario "problem_user" 
+ E digitar a senha "secret_source":
+
+ Então deve ser exibida a seleção de produtos com a falta das imagens.
+
+# 4° Cenario: Autenticação Invalida
+
+ Dado que eu acesse a página inicial do site saucedemo;
+ Quando eu digitar o usuario "qualquer_user" 
+ E digitar a senha "secret_source":
+
+ Então deve ser exibida a seleção de produtos com a falta das imagens.
